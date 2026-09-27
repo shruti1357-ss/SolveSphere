@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+/* Base Mobile & Global Fixes */
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Hide scrollbar but keep scrolling */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Government portal: keep the long navigation scrollable without showing a scrollbar. */
+.gov-sidebar-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+.gov-sidebar-scroll::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+/* Industry sidebar: keep navigation scrollable while hiding the scrollbar. */
+.industry-sidebar-nav {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+.industry-sidebar-nav::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+/* Smooth Touch Scrolling for Horizontal Bars & Tables */
+.overflow-x-auto {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Mobile-friendly table container helper */
+@media (max-width: 640px) {
+  table {
+    min-width: 600px;
+  }
+}
